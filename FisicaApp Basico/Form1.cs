@@ -27,7 +27,7 @@ namespace FisicaApp_Basico
 
         private void btTorr_Click(object sender, EventArgs e)
         {
-            decimal Torr = (nmEntrada1.Value * nmEntrada1.Value) + 2 * nmEntrada2.Value * nmEntrada3.Value;
+            decimal Torr = (decimal)Math.Sqrt((double)((nmEntrada1.Value * nmEntrada1.Value) + 2 * nmEntrada2.Value * nmEntrada3.Value));
             lblResultado.Text = Torr.ToString("0.0") + " m/s";
         }
     }
