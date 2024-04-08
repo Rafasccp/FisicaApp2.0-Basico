@@ -9,14 +9,28 @@ namespace FisicaApp_Basico
 
         private void btVm_Click(object sender, EventArgs e)
         {
-            decimal Vm = nmEntrada1.Value / nmEntrada2.Value;
-            lblResultado.Text = Vm.ToString("0.0") + " m/s";
+            if (nmEntrada2.Value == 0)
+            {
+                MessageBox.Show("Você esqueceu de algum valor");
+            }
+            else
+            {
+                decimal Vm = nmEntrada1.Value / nmEntrada2.Value;
+                lblResultado.Text = Vm.ToString("0.0") + " m/s";
+            }
         }
 
         private void btAcel_Click(object sender, EventArgs e)
         {
-            decimal Acel = nmEntrada1.Value / nmEntrada2.Value;
-            lblResultado.Text = Acel.ToString("0.0") + " m/s²";
+            if (nmEntrada2.Value == 0)
+            {
+                MessageBox.Show("Você esqueceu de algum valor");
+            }
+            else
+            {
+                decimal Acel = nmEntrada1.Value / nmEntrada2.Value;
+                lblResultado.Text = Acel.ToString("0.0") + " m/s²";
+            }
         }
 
         private void btMu_Click(object sender, EventArgs e)
